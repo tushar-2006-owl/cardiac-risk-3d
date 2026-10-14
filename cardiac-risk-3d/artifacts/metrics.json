@@ -1,0 +1,691 @@
+{
+  "validation": {
+    "method": "RepeatedStratifiedKFold",
+    "n_splits": 5,
+    "n_repeats": 3,
+    "random_state": 42,
+    "holdout": "none \u2014 all labeled rows participate in repeated CV",
+    "model_selection": "Each registered family is scored on identical repeated-CV folds. The family with the highest mean ROC-AUC is selected per target. Reported repeated-CV scores belong to the selected family and may be slightly optimistic because the family was chosen on the same folds. nested_cv_roc_auc is a less biased estimate of that selection procedure.",
+    "calibration": "Final probabilities come from CalibratedClassifierCV (method=sigmoid, cv=5) wrapping the full sklearn Pipeline. Calibration folds are internal and do not reuse a model already fit on the calibration rows."
+  },
+  "label_mapping": {
+    "sex": {
+      "Male": "Male",
+      "male": "Male",
+      "Fmale": "Female",
+      "Female": "Female",
+      "female": "Female"
+    },
+    "yn": {
+      "Y": 1,
+      "N": 0,
+      "y": 1,
+      "n": 0,
+      "Yes": 1,
+      "No": 0,
+      "1": 1,
+      "0": 0,
+      "1": 1,
+      "0": 0
+    },
+    "targets": {
+      "CAD": {
+        "source_column": "Cath",
+        "mapping": {
+          "CAD": 1,
+          "Normal": 0,
+          "cad": 1,
+          "normal": 0
+        },
+        "positive_rate": 0.7128712871287128
+      },
+      "LAD": {
+        "source_column": "LAD",
+        "mapping": {
+          "Stenotic": 1,
+          "Normal": 0,
+          "stenotic": 1,
+          "normal": 0
+        },
+        "positive_rate": 0.5841584158415841
+      },
+      "LCX": {
+        "source_column": "LCX",
+        "mapping": {
+          "Stenotic": 1,
+          "Normal": 0,
+          "stenotic": 1,
+          "normal": 0
+        },
+        "positive_rate": 0.3927392739273927
+      },
+      "RCA": {
+        "source_column": "RCA",
+        "mapping": {
+          "Stenotic": 1,
+          "Normal": 0,
+          "stenotic": 1,
+          "normal": 0
+        },
+        "positive_rate": 0.37623762376237624
+      }
+    }
+  },
+  "n_samples": 303,
+  "features": [
+    "Age",
+    "Weight",
+    "Length",
+    "Sex",
+    "BMI",
+    "DM",
+    "HTN",
+    "Current Smoker",
+    "EX-Smoker",
+    "FH",
+    "Obesity",
+    "CRF",
+    "CVA",
+    "Airway disease",
+    "Thyroid Disease",
+    "CHF",
+    "DLP",
+    "BP",
+    "PR",
+    "Edema",
+    "Weak Peripheral Pulse",
+    "Lung rales",
+    "Systolic Murmur",
+    "Diastolic Murmur",
+    "Typical Chest Pain",
+    "Dyspnea",
+    "Function Class",
+    "Atypical",
+    "Nonanginal",
+    "LowTH Ang",
+    "Q Wave",
+    "St Elevation",
+    "St Depression",
+    "Tinversion",
+    "LVH",
+    "Poor R Progression",
+    "BBB",
+    "FBS",
+    "CR",
+    "TG",
+    "LDL",
+    "HDL",
+    "BUN",
+    "ESR",
+    "HB",
+    "K",
+    "Na",
+    "WBC",
+    "Lymph",
+    "Neut",
+    "PLT",
+    "EF-TTE",
+    "Region RWMA",
+    "VHD"
+  ],
+  "leakage_excluded": [
+    "Cath",
+    "Exertional CP",
+    "LAD",
+    "LCX",
+    "RCA"
+  ],
+  "dropped_zero_variance": [
+    "Exertional CP"
+  ],
+  "targets": {
+    "CAD": {
+      "positive_rate": 0.7128712871287128,
+      "n_positive": 216,
+      "n_negative": 87,
+      "selected_model": "random_forest",
+      "selected_model_display": "Random Forest",
+      "cv": {
+        "accuracy": {
+          "mean": 0.8679417122040073,
+          "std": 0.03964556148973876
+        },
+        "precision": {
+          "mean": 0.9223426851888649,
+          "std": 0.04199578798476903
+        },
+        "recall": {
+          "mean": 0.8921071176885129,
+          "std": 0.04028860586364622
+        },
+        "f1": {
+          "mean": 0.905992826390029,
+          "std": 0.027535159477340507
+        },
+        "roc_auc": {
+          "mean": 0.9284018939969692,
+          "std": 0.03189720739902567
+        },
+        "brier": {
+          "mean": 0.12307511289111707,
+          "std": 0.015656428407252933
+        }
+      },
+      "candidates": {
+        "logreg": {
+          "display": "Logistic Regression",
+          "cv": {
+            "accuracy": {
+              "mean": 0.8370673952641166,
+              "std": 0.04256356912907377
+            },
+            "precision": {
+              "mean": 0.9176860632167079,
+              "std": 0.03279856674854489
+            },
+            "recall": {
+              "mean": 0.8485553206483438,
+              "std": 0.05373282958582198
+            },
+            "f1": {
+              "mean": 0.8806710744186202,
+              "std": 0.03363505234013728
+            },
+            "roc_auc": {
+              "mean": 0.9104349468234556,
+              "std": 0.026701406975733064
+            },
+            "brier": {
+              "mean": 0.12299873292203271,
+              "std": 0.026554460787346006
+            }
+          }
+        },
+        "random_forest": {
+          "display": "Random Forest",
+          "cv": {
+            "accuracy": {
+              "mean": 0.8679417122040073,
+              "std": 0.03964556148973876
+            },
+            "precision": {
+              "mean": 0.9223426851888649,
+              "std": 0.04199578798476903
+            },
+            "recall": {
+              "mean": 0.8921071176885129,
+              "std": 0.04028860586364622
+            },
+            "f1": {
+              "mean": 0.905992826390029,
+              "std": 0.027535159477340507
+            },
+            "roc_auc": {
+              "mean": 0.9284018939969692,
+              "std": 0.03189720739902567
+            },
+            "brier": {
+              "mean": 0.12307511289111707,
+              "std": 0.015656428407252933
+            }
+          }
+        },
+        "xgboost": {
+          "display": "XGBoost",
+          "cv": {
+            "accuracy": {
+              "mean": 0.8536976320582876,
+              "std": 0.04597509858644415
+            },
+            "precision": {
+              "mean": 0.9244875417744629,
+              "std": 0.0421700459354406
+            },
+            "recall": {
+              "mean": 0.8672656800563777,
+              "std": 0.04601686388388834
+            },
+            "f1": {
+              "mean": 0.8940554305639073,
+              "std": 0.033506076830186256
+            },
+            "roc_auc": {
+              "mean": 0.9120742306788819,
+              "std": 0.03960870508701322
+            },
+            "brier": {
+              "mean": 0.11027852296829224,
+              "std": 0.02439203854990998
+            }
+          }
+        }
+      },
+      "nested_cv_roc_auc": {
+        "mean": 0.9282496649117716,
+        "std": 0.04789305728840122,
+        "winner_counts": {
+          "logreg": 0,
+          "random_forest": 5,
+          "xgboost": 0
+        }
+      },
+      "plots": {
+        "roc": "/plots/roc_CAD.png",
+        "calibration": "/plots/calibration_CAD.png",
+        "confusion": "/plots/confusion_CAD.png"
+      },
+      "oof_brier": 0.12307511289111707
+    },
+    "LAD": {
+      "positive_rate": 0.5841584158415841,
+      "n_positive": 177,
+      "n_negative": 126,
+      "selected_model": "random_forest",
+      "selected_model_display": "Random Forest",
+      "cv": {
+        "accuracy": {
+          "mean": 0.7964845173041895,
+          "std": 0.03855570170478996
+        },
+        "precision": {
+          "mean": 0.8168704760192139,
+          "std": 0.038995580424663105
+        },
+        "recall": {
+          "mean": 0.8437566137566138,
+          "std": 0.06250714724757543
+        },
+        "f1": {
+          "mean": 0.8284121473207559,
+          "std": 0.03395341929060032
+        },
+        "roc_auc": {
+          "mean": 0.8557113553113553,
+          "std": 0.04880416131523759
+        },
+        "brier": {
+          "mean": 0.16815306765852317,
+          "std": 0.01459430621767343
+        }
+      },
+      "candidates": {
+        "logreg": {
+          "display": "Logistic Regression",
+          "cv": {
+            "accuracy": {
+              "mean": 0.7215300546448087,
+              "std": 0.05207708431817303
+            },
+            "precision": {
+              "mean": 0.7815991090588251,
+              "std": 0.04637098118559482
+            },
+            "recall": {
+              "mean": 0.7303703703703703,
+              "std": 0.08727141648658233
+            },
+            "f1": {
+              "mean": 0.7520998954514327,
+              "std": 0.053693935324303235
+            },
+            "roc_auc": {
+              "mean": 0.807606512006512,
+              "std": 0.05931648826888708
+            },
+            "brier": {
+              "mean": 0.19728209616570744,
+              "std": 0.040159922930907414
+            }
+          }
+        },
+        "random_forest": {
+          "display": "Random Forest",
+          "cv": {
+            "accuracy": {
+              "mean": 0.7964845173041895,
+              "std": 0.03855570170478996
+            },
+            "precision": {
+              "mean": 0.8168704760192139,
+              "std": 0.038995580424663105
+            },
+            "recall": {
+              "mean": 0.8437566137566138,
+              "std": 0.06250714724757543
+            },
+            "f1": {
+              "mean": 0.8284121473207559,
+              "std": 0.03395341929060032
+            },
+            "roc_auc": {
+              "mean": 0.8557113553113553,
+              "std": 0.04880416131523759
+            },
+            "brier": {
+              "mean": 0.16815306765852317,
+              "std": 0.01459430621767343
+            }
+          }
+        },
+        "xgboost": {
+          "display": "XGBoost",
+          "cv": {
+            "accuracy": {
+              "mean": 0.7644990892531874,
+              "std": 0.05022318584807348
+            },
+            "precision": {
+              "mean": 0.8075017267307921,
+              "std": 0.05177997707748596
+            },
+            "recall": {
+              "mean": 0.7892063492063494,
+              "std": 0.08164679267818256
+            },
+            "f1": {
+              "mean": 0.7953267252080622,
+              "std": 0.04888880098847335
+            },
+            "roc_auc": {
+              "mean": 0.8264747252747254,
+              "std": 0.053715151854349746
+            },
+            "brier": {
+              "mean": 0.16918010314305623,
+              "std": 0.029693571091326053
+            }
+          }
+        }
+      },
+      "nested_cv_roc_auc": {
+        "mean": 0.8625772893772894,
+        "std": 0.0612254143847319,
+        "winner_counts": {
+          "logreg": 0,
+          "random_forest": 5,
+          "xgboost": 0
+        }
+      },
+      "plots": {
+        "roc": "/plots/roc_LAD.png",
+        "calibration": "/plots/calibration_LAD.png",
+        "confusion": "/plots/confusion_LAD.png"
+      },
+      "oof_brier": 0.16815306765852317
+    },
+    "LCX": {
+      "positive_rate": 0.3927392739273927,
+      "n_positive": 119,
+      "n_negative": 184,
+      "selected_model": "xgboost",
+      "selected_model_display": "XGBoost",
+      "cv": {
+        "accuracy": {
+          "mean": 0.6876138433515483,
+          "std": 0.04385488071730669
+        },
+        "precision": {
+          "mean": 0.6057870095551257,
+          "std": 0.06825122150703507
+        },
+        "recall": {
+          "mean": 0.5997584541062803,
+          "std": 0.07862779974582557
+        },
+        "f1": {
+          "mean": 0.6002488388481395,
+          "std": 0.06000069331700364
+        },
+        "roc_auc": {
+          "mean": 0.7404466060263162,
+          "std": 0.06508718005025999
+        },
+        "brier": {
+          "mean": 0.20767949720223744,
+          "std": 0.030786946100498605
+        }
+      },
+      "candidates": {
+        "logreg": {
+          "display": "Logistic Regression",
+          "cv": {
+            "accuracy": {
+              "mean": 0.6028597449908926,
+              "std": 0.05454214269218165
+            },
+            "precision": {
+              "mean": 0.5003294419523509,
+              "std": 0.0629603765600315
+            },
+            "recall": {
+              "mean": 0.5708937198067633,
+              "std": 0.08679426142507984
+            },
+            "f1": {
+              "mean": 0.5293425822006487,
+              "std": 0.05738157194555041
+            },
+            "roc_auc": {
+              "mean": 0.6427794642468554,
+              "std": 0.062102836496350955
+            },
+            "brier": {
+              "mean": 0.26859646055868963,
+              "std": 0.038489727190417315
+            }
+          }
+        },
+        "random_forest": {
+          "display": "Random Forest",
+          "cv": {
+            "accuracy": {
+              "mean": 0.6810200364298725,
+              "std": 0.05488363760190142
+            },
+            "precision": {
+              "mean": 0.5901164138857792,
+              "std": 0.07412927340464001
+            },
+            "recall": {
+              "mean": 0.6446859903381643,
+              "std": 0.07507855712552425
+            },
+            "f1": {
+              "mean": 0.6138077162863322,
+              "std": 0.06064732047601097
+            },
+            "roc_auc": {
+              "mean": 0.7330543405724564,
+              "std": 0.0632117614052847
+            },
+            "brier": {
+              "mean": 0.2114483200291913,
+              "std": 0.014284310339582098
+            }
+          }
+        },
+        "xgboost": {
+          "display": "XGBoost",
+          "cv": {
+            "accuracy": {
+              "mean": 0.6876138433515483,
+              "std": 0.04385488071730669
+            },
+            "precision": {
+              "mean": 0.6057870095551257,
+              "std": 0.06825122150703507
+            },
+            "recall": {
+              "mean": 0.5997584541062803,
+              "std": 0.07862779974582557
+            },
+            "f1": {
+              "mean": 0.6002488388481395,
+              "std": 0.06000069331700364
+            },
+            "roc_auc": {
+              "mean": 0.7404466060263162,
+              "std": 0.06508718005025999
+            },
+            "brier": {
+              "mean": 0.20767949720223744,
+              "std": 0.030786946100498605
+            }
+          }
+        }
+      },
+      "nested_cv_roc_auc": {
+        "mean": 0.7337614788701745,
+        "std": 0.0745721689000333,
+        "winner_counts": {
+          "logreg": 0,
+          "random_forest": 4,
+          "xgboost": 1
+        }
+      },
+      "plots": {
+        "roc": "/plots/roc_LCX.png",
+        "calibration": "/plots/calibration_LCX.png",
+        "confusion": "/plots/confusion_LCX.png"
+      },
+      "oof_brier": 0.20767949720223744
+    },
+    "RCA": {
+      "positive_rate": 0.37623762376237624,
+      "n_positive": 114,
+      "n_negative": 189,
+      "selected_model": "random_forest",
+      "selected_model_display": "Random Forest",
+      "cv": {
+        "accuracy": {
+          "mean": 0.6722950819672131,
+          "std": 0.0454492408252795
+        },
+        "precision": {
+          "mean": 0.5683798747177428,
+          "std": 0.07301340540345005
+        },
+        "recall": {
+          "mean": 0.5934123847167325,
+          "std": 0.1157759363338059
+        },
+        "f1": {
+          "mean": 0.5731089349083536,
+          "std": 0.06811999512730695
+        },
+        "roc_auc": {
+          "mean": 0.7244904671678127,
+          "std": 0.047123541260734085
+        },
+        "brier": {
+          "mean": 0.21173277590746659,
+          "std": 0.009432645748905517
+        }
+      },
+      "candidates": {
+        "logreg": {
+          "display": "Logistic Regression",
+          "cv": {
+            "accuracy": {
+              "mean": 0.6490892531876137,
+              "std": 0.050729006221517076
+            },
+            "precision": {
+              "mean": 0.5309715218774016,
+              "std": 0.055519663940204286
+            },
+            "recall": {
+              "mean": 0.6175230566534914,
+              "std": 0.11506386586441317
+            },
+            "f1": {
+              "mean": 0.5666070936813413,
+              "std": 0.069679048543922
+            },
+            "roc_auc": {
+              "mean": 0.6996641534398972,
+              "std": 0.053050596269578594
+            },
+            "brier": {
+              "mean": 0.24377932052581036,
+              "std": 0.024723779310561012
+            }
+          }
+        },
+        "random_forest": {
+          "display": "Random Forest",
+          "cv": {
+            "accuracy": {
+              "mean": 0.6722950819672131,
+              "std": 0.0454492408252795
+            },
+            "precision": {
+              "mean": 0.5683798747177428,
+              "std": 0.07301340540345005
+            },
+            "recall": {
+              "mean": 0.5934123847167325,
+              "std": 0.1157759363338059
+            },
+            "f1": {
+              "mean": 0.5731089349083536,
+              "std": 0.06811999512730695
+            },
+            "roc_auc": {
+              "mean": 0.7244904671678127,
+              "std": 0.047123541260734085
+            },
+            "brier": {
+              "mean": 0.21173277590746659,
+              "std": 0.009432645748905517
+            }
+          }
+        },
+        "xgboost": {
+          "display": "XGBoost",
+          "cv": {
+            "accuracy": {
+              "mean": 0.6811111111111111,
+              "std": 0.05855513964735234
+            },
+            "precision": {
+              "mean": 0.592950048395483,
+              "std": 0.11005033933896577
+            },
+            "recall": {
+              "mean": 0.567588932806324,
+              "std": 0.1254172415173363
+            },
+            "f1": {
+              "mean": 0.5692267556994931,
+              "std": 0.07949849827296868
+            },
+            "roc_auc": {
+              "mean": 0.7244863440515614,
+              "std": 0.05718536189812436
+            },
+            "brier": {
+              "mean": 0.21375923951466877,
+              "std": 0.02658518708033431
+            }
+          }
+        }
+      },
+      "nested_cv_roc_auc": {
+        "mean": 0.7252643948296124,
+        "std": 0.06030786392799585,
+        "winner_counts": {
+          "logreg": 0,
+          "random_forest": 2,
+          "xgboost": 3
+        }
+      },
+      "plots": {
+        "roc": "/plots/roc_RCA.png",
+        "calibration": "/plots/calibration_RCA.png",
+        "confusion": "/plots/confusion_RCA.png"
+      },
+      "oof_brier": 0.21173277590746659
+    }
+  }
+}

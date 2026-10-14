@@ -1,0 +1,914 @@
+[
+  {
+    "name": "Age",
+    "display_label": "Age",
+    "group": "Demographics",
+    "type": "number",
+    "unit": "years",
+    "notes": null,
+    "reference_range": null,
+    "categories": null,
+    "min": 30.0,
+    "max": 86.0,
+    "default": 58.0
+  },
+  {
+    "name": "BMI",
+    "display_label": "BMI",
+    "group": "Demographics",
+    "type": "number",
+    "unit": "kg/m\u00b2",
+    "notes": null,
+    "reference_range": {
+      "low": 18.5,
+      "high": 24.9
+    },
+    "categories": null,
+    "min": 18.115412710007302,
+    "max": 40.90065778377467,
+    "default": 26.775510204081634
+  },
+  {
+    "name": "Length",
+    "display_label": "Height",
+    "group": "Demographics",
+    "type": "number",
+    "unit": "cm",
+    "notes": null,
+    "reference_range": null,
+    "categories": null,
+    "min": 140.0,
+    "max": 188.0,
+    "default": 165.0
+  },
+  {
+    "name": "Sex",
+    "display_label": "Sex",
+    "group": "Demographics",
+    "type": "categorical",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      "Female",
+      "Male"
+    ],
+    "default": "Male",
+    "min": null,
+    "max": null
+  },
+  {
+    "name": "Weight",
+    "display_label": "Weight",
+    "group": "Demographics",
+    "type": "number",
+    "unit": "kg",
+    "notes": null,
+    "reference_range": null,
+    "categories": null,
+    "min": 48.0,
+    "max": 120.0,
+    "default": 74.0
+  },
+  {
+    "name": "Airway disease",
+    "display_label": "Airway disease",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Atypical",
+    "display_label": "Atypical chest pain",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "CVA",
+    "display_label": "Cerebrovascular accident",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "CRF",
+    "display_label": "Chronic renal failure",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "CHF",
+    "display_label": "Congestive heart failure",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Current Smoker",
+    "display_label": "Current smoker",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "DM",
+    "display_label": "Diabetes mellitus",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Diastolic Murmur",
+    "display_label": "Diastolic murmur",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "DLP",
+    "display_label": "Dyslipidemia",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Dyspnea",
+    "display_label": "Dyspnea",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Edema",
+    "display_label": "Edema",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "EX-Smoker",
+    "display_label": "Ex-smoker",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "FH",
+    "display_label": "Family history of CAD",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "HTN",
+    "display_label": "Hypertension",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 1
+  },
+  {
+    "name": "LowTH Ang",
+    "display_label": "Low-threshold angina",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Lung rales",
+    "display_label": "Lung rales",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Function Class",
+    "display_label": "NYHA / function class",
+    "group": "Clinical exam",
+    "type": "number",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 1
+    },
+    "categories": null,
+    "min": 0.0,
+    "max": 3.0,
+    "default": 0.0
+  },
+  {
+    "name": "Nonanginal",
+    "display_label": "Non-anginal chest pain",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Obesity",
+    "display_label": "Obesity",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 1
+  },
+  {
+    "name": "PR",
+    "display_label": "Pulse rate",
+    "group": "Clinical exam",
+    "type": "number",
+    "unit": "bpm",
+    "notes": null,
+    "reference_range": {
+      "low": 60,
+      "high": 100
+    },
+    "categories": null,
+    "min": 50.0,
+    "max": 110.0,
+    "default": 70.0
+  },
+  {
+    "name": "BP",
+    "display_label": "Systolic blood pressure",
+    "group": "Clinical exam",
+    "type": "number",
+    "unit": "mmHg",
+    "notes": null,
+    "reference_range": {
+      "low": 90,
+      "high": 129
+    },
+    "categories": null,
+    "min": 90.0,
+    "max": 190.0,
+    "default": 130.0
+  },
+  {
+    "name": "Systolic Murmur",
+    "display_label": "Systolic murmur",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Thyroid Disease",
+    "display_label": "Thyroid disease",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Typical Chest Pain",
+    "display_label": "Typical chest pain",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 1
+  },
+  {
+    "name": "Weak Peripheral Pulse",
+    "display_label": "Weak peripheral pulse",
+    "group": "Clinical exam",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "BBB",
+    "display_label": "Bundle branch block",
+    "group": "ECG",
+    "type": "categorical",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      "LBBB",
+      "N",
+      "RBBB"
+    ],
+    "default": "N",
+    "min": null,
+    "max": null
+  },
+  {
+    "name": "LVH",
+    "display_label": "Left ventricular hypertrophy",
+    "group": "ECG",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Poor R Progression",
+    "display_label": "Poor R-wave progression",
+    "group": "ECG",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Q Wave",
+    "display_label": "Q wave",
+    "group": "ECG",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "St Depression",
+    "display_label": "ST depression",
+    "group": "ECG",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "St Elevation",
+    "display_label": "ST elevation",
+    "group": "ECG",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "Tinversion",
+    "display_label": "T-wave inversion",
+    "group": "ECG",
+    "type": "binary",
+    "unit": null,
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": [
+      0,
+      1
+    ],
+    "min": 0,
+    "max": 1,
+    "default": 0
+  },
+  {
+    "name": "BUN",
+    "display_label": "BUN",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "mg/dL",
+    "notes": null,
+    "reference_range": {
+      "low": 7,
+      "high": 20
+    },
+    "categories": null,
+    "min": 6.0,
+    "max": 52.0,
+    "default": 16.0
+  },
+  {
+    "name": "CR",
+    "display_label": "Creatinine",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "mg/dL",
+    "notes": null,
+    "reference_range": {
+      "low": 0.6,
+      "high": 1.3
+    },
+    "categories": null,
+    "min": 0.5,
+    "max": 2.2,
+    "default": 1.0
+  },
+  {
+    "name": "ESR",
+    "display_label": "ESR",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "mm/h",
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 20
+    },
+    "categories": null,
+    "min": 1.0,
+    "max": 90.0,
+    "default": 15.0
+  },
+  {
+    "name": "FBS",
+    "display_label": "Fasting blood sugar",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "mg/dL",
+    "notes": null,
+    "reference_range": {
+      "low": 70,
+      "high": 99
+    },
+    "categories": null,
+    "min": 62.0,
+    "max": 400.0,
+    "default": 98.0
+  },
+  {
+    "name": "HDL",
+    "display_label": "HDL cholesterol",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "mg/dL",
+    "notes": null,
+    "reference_range": {
+      "low": 40,
+      "high": 100
+    },
+    "categories": null,
+    "min": 15.9,
+    "max": 111.0,
+    "default": 39.0
+  },
+  {
+    "name": "HB",
+    "display_label": "Hemoglobin",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "g/dL",
+    "notes": null,
+    "reference_range": {
+      "low": 12.0,
+      "high": 17.0
+    },
+    "categories": null,
+    "min": 8.9,
+    "max": 17.6,
+    "default": 13.2
+  },
+  {
+    "name": "LDL",
+    "display_label": "LDL cholesterol",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "mg/dL",
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 99
+    },
+    "categories": null,
+    "min": 18.0,
+    "max": 232.0,
+    "default": 100.0
+  },
+  {
+    "name": "Lymph",
+    "display_label": "Lymphocytes",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "%",
+    "notes": null,
+    "reference_range": {
+      "low": 20,
+      "high": 40
+    },
+    "categories": null,
+    "min": 7.0,
+    "max": 60.0,
+    "default": 32.0
+  },
+  {
+    "name": "Neut",
+    "display_label": "Neutrophils",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "%",
+    "notes": null,
+    "reference_range": {
+      "low": 40,
+      "high": 70
+    },
+    "categories": null,
+    "min": 32.0,
+    "max": 89.0,
+    "default": 60.0
+  },
+  {
+    "name": "PLT",
+    "display_label": "Platelets",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "\u00d710\u00b3/\u00b5L",
+    "notes": null,
+    "reference_range": {
+      "low": 150,
+      "high": 400
+    },
+    "categories": null,
+    "min": 25.0,
+    "max": 742.0,
+    "default": 210.0
+  },
+  {
+    "name": "K",
+    "display_label": "Potassium",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "mEq/L",
+    "notes": null,
+    "reference_range": {
+      "low": 3.5,
+      "high": 5.0
+    },
+    "categories": null,
+    "min": 3.0,
+    "max": 6.6,
+    "default": 4.2
+  },
+  {
+    "name": "Na",
+    "display_label": "Sodium",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "mEq/L",
+    "notes": null,
+    "reference_range": {
+      "low": 135,
+      "high": 145
+    },
+    "categories": null,
+    "min": 128.0,
+    "max": 156.0,
+    "default": 141.0
+  },
+  {
+    "name": "TG",
+    "display_label": "Triglycerides",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "mg/dL",
+    "notes": null,
+    "reference_range": {
+      "low": 0,
+      "high": 149
+    },
+    "categories": null,
+    "min": 37.0,
+    "max": 1050.0,
+    "default": 122.0
+  },
+  {
+    "name": "WBC",
+    "display_label": "White blood cells",
+    "group": "Laboratory",
+    "type": "number",
+    "unit": "/\u00b5L",
+    "notes": null,
+    "reference_range": {
+      "low": 4000,
+      "high": 11000
+    },
+    "categories": null,
+    "min": 3700.0,
+    "max": 18000.0,
+    "default": 7100.0
+  },
+  {
+    "name": "EF-TTE",
+    "display_label": "Ejection fraction (TTE)",
+    "group": "Echo",
+    "type": "number",
+    "unit": "%",
+    "notes": null,
+    "reference_range": {
+      "low": 50,
+      "high": 70
+    },
+    "categories": null,
+    "min": 15.0,
+    "max": 60.0,
+    "default": 50.0
+  },
+  {
+    "name": "Region RWMA",
+    "display_label": "Region with RWMA",
+    "group": "Echo",
+    "type": "number",
+    "unit": "score 0\u20134",
+    "notes": "Clinical echo wall-motion score, not an anatomical lesion coordinate.",
+    "reference_range": {
+      "low": 0,
+      "high": 0
+    },
+    "categories": null,
+    "min": 0.0,
+    "max": 4.0,
+    "default": 0.0
+  },
+  {
+    "name": "VHD",
+    "display_label": "Valvular heart disease",
+    "group": "Echo",
+    "type": "ordinal",
+    "unit": null,
+    "notes": null,
+    "reference_range": null,
+    "categories": [
+      "N",
+      "mild",
+      "Moderate",
+      "Severe"
+    ],
+    "default": "mild",
+    "min": null,
+    "max": null
+  }
+]
